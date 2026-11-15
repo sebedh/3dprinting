@@ -13,5 +13,13 @@ Prints as two halves (241 × 198 × 221 mm) that fit a 256 mm bed.
 - Bolt the halves together with 6 × M5×20 bolts, nuts and washers
 - Use as many rack screws as possible, and support the back if your rack allows it
 
-## Customize
-Edit the parameters in `rack_minipc.py`, then run `freecadcmd rack_minipc.py`.
+## Build
+Edit the parameters in `rack_minipc.py`, then:
+
+```
+make          # regenerate STL + STEP files
+make clean    # remove generated files
+make FREECAD=/path/to/freecadcmd   # use a specific FreeCAD
+```
+
+Needs FreeCAD 1.x. By default `make` uses a `FreeCAD*.AppImage` in this folder, else `freecadcmd` from PATH.
